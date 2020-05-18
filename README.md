@@ -16,6 +16,7 @@ ASL.py supposedly imports the op and defines a new autograd function based on AS
 
 # TODO
 1. Solve error above
+
 Possibly due to path error from python3 installed in anaconda. 
 2. Further error removal
 3. Test code efficiency (compare and contrast with paper results)
