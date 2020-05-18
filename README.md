@@ -1,5 +1,6 @@
 # ActiveShiftLayer-Naver
-Pytorch implementation of "Constructing Fast Networkthrough Deconstruction of Convolution" (https://papers.nips.cc/paper/7835-constructing-fast-network-through-deconstruction-of-convolution.pdf).
+Pytorch implementation of "Constructing Fast Networkthrough Deconstruction of Convolution" 
+(https://papers.nips.cc/paper/7835-constructing-fast-network-through-deconstruction-of-convolution.pdf).
 
 # Implementation
 The program could not be compiled/tested on my local computer due to an unknown error : 
@@ -22,6 +23,8 @@ ASL.py supposedly imports the op and defines a new autograd function based on AS
 Possibly due to path error from python3 installed in anaconda. 
 
 2. Further error removal
+
+The backward function may be prone to error.
 
 3. Test code efficiency (compare and contrast with paper results)
 
