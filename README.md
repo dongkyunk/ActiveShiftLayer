@@ -11,6 +11,7 @@ The intended code is supposed to be used with the following code:
 ```bash
 ~/setup.py/ install (to install custom C++ op)
 ```
+opASL.cpp is the c++ file containing a custom op. It follows the mathematical formulas in the paper, with a forward function that returns a tensor with ASL updated values in formula 11.
 ASL.py supposedly imports the op and defines a new autograd function based on ASL.
 
 # TODO
