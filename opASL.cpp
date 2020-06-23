@@ -65,11 +65,11 @@ torch::Tensor ASL_Forward(const torch::Tensor &input, const torch::Tensor &theta
 						}
 						if (h + alphaFloor + 1 < H && w + betaFloor < W)
 						{
-							z2 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor) * inStrideW];
+							z3 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor) * inStrideW];
 						}
 						if (h + alphaFloor + 1 < H && w + betaFloor + 1 < W)
 						{
-							z2 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor + 1) * inStrideW];
+							z4 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor + 1) * inStrideW];
 						}
 						//Eq(8)
 						*currOutputPtr += z1 * (1 - alphaDiff) * (1 - betaDiff) + z2 * (alphaDiff) * (1 - betaDiff) + z3 * (1 - alphaDiff) * (betaDiff) + z4 * (alphaDiff) * (betaDiff);
@@ -143,11 +143,11 @@ torch::Tensor ASL_Backward(const torch::Tensor &out_gradient, const torch::Tenso
 						}
 						if (h + alphaFloor + 1 < H && w + betaFloor < W)
 						{
-							z2 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor) * inStrideW];
+							z3 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor) * inStrideW];
 						}
 						if (h + alphaFloor + 1 < H && w + betaFloor + 1 < W)
 						{
-							z2 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor + 1) * inStrideW];
+							z4 = currInputPtr[(h + alphaFloor + 1) * inStrideH + (w + betaFloor + 1) * inStrideW];
 						}
 						scalar_t *currInGPtr = in_gradientPtr + n * in_gradient.stride(0) + c * in_gradient.stride(1)
 						 + h * in_gradient.stride(2) + w * in_gradient.stride(3);
